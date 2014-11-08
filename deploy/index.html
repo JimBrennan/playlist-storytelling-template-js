@@ -36,14 +36,14 @@
 	<link type="image/ico" rel="shortcut icon" href="//resources.esri.com/favicon.ico">
 	<link type="image/ico" rel="icon" href="//resources.esri.com/favicon.ico">
 
-	<!-- load Avenir from fonts.com  this is will only work on localhost, arcgis.com or esri.com domains -->
+	<!-- load Avenir from fonts.com  this is will only work on localhost, arcgis.com or esri.com domains 
 	<link href="//fast.fonts.com/cssapi/4a60d16b-c9e4-404d-89d3-809adb97d65c.css" media="screen" rel="stylesheet" type="text/css" />
 	
 	<link href="//js.arcgis.com/3.10/js/dojo/dijit/themes/tundra/tundra.css" media="screen" rel="stylesheet" type="text/css" />
 	
 	<link href="//js.arcgis.com/3.10/js/esri/css/esri.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="app/stylesheets/arcgis.min.css" media="screen" rel="stylesheet" type="text/css" />
-	<link href="app/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+	 <link href="app/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" /> -->
 
 	<!--[if lt IE 9]>
 	
@@ -198,14 +198,14 @@
 				name: 'storymaps',
 				location: location.pathname.replace(/\/[^/]+$/, '/') + 'app/javascript'
 			},
-			//{
-			//	name: 'lib',
-			//	location: location.pathname.replace(/\/[^/]+$/, '/') + 'lib'
-			//},
 			{
-				name: 'esriTemplate',
-			 	location: location.pathname.replace(/\/[^/]+$/, '/') + 'resources'
-			}
+				name: 'lib',
+				location: location.pathname.replace(/\/[^/]+$/, '/') + 'lib'
+			}//,
+			// {
+			// 	name: 'esriTemplate',
+			// 	location: location.pathname.replace(/\/[^/]+$/, '/') + 'resources'
+			// }
 			]
 		};
 	</script>
@@ -215,13 +215,12 @@
 		var configOptions = {
 			// The web map id
 			webmap: "225d8fdebb1440db80165645dcd16b91",
-			/webmap: "3b440d4b507e4210a2b3f105da5bbf5d",
 			// Enter a title, if no title is specified, the webmap's title is used.
-			title: "Playlist Story Map Demo",
+			title: "",
 			// Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
-			subtitle: "Heartland GIS",
+			subtitle: "",
 			// Enter a description, if not specified the ArcGIS.com web map's description is used
-			description: "Testing the Playlist app Story Map",
+			description: "",
 			// Choose data fields
 			dataFields: {
 				// Change name field to match data
@@ -240,7 +239,7 @@
 				// Add a name for your playlist point layer to be used in the legend.
 				"layerTitle": "Playlist Layer",
 				// Choose to display your playlist point layer in the legend (true or false).
-				"visible": false,
+				"visible": true,
 				"items": {
 					"redIcon": {
 						// Choose to display icon in the legend (true or false).
